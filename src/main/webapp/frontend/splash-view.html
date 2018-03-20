@@ -1,0 +1,17 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="splash-view">
+    <template>
+		<h1>Heading 1</h1>
+		<p>This is the main view of the example app</p>
+    </template>
+
+    <script>
+        class SplashView extends Polymer.Element {
+            static get is() {
+                return 'splash-view';
+            }
+        }
+        customElements.define(SplashView.is, SplashView);
+    </script>
+</dom-module>
