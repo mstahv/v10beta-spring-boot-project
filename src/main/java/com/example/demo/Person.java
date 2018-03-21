@@ -1,11 +1,10 @@
 package com.example.demo;
 
 import com.vividsolutions.jts.geom.Point;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.Lob;
-import javax.persistence.Temporal;
-import java.util.Date;
 
 /**
  * Created by mattitahvonenitmill on 12/05/16.
@@ -15,8 +14,7 @@ public class Person extends AbstractEntity {
 
     private String name;
     private String email;
-    @Temporal(javax.persistence.TemporalType.DATE)
-    private Date birthday;
+    private LocalDate birthday;
     @Lob
     private Point location;
 
@@ -27,10 +25,10 @@ public class Person extends AbstractEntity {
         this.email = mail;
     }
     
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 
